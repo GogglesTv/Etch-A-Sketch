@@ -1,0 +1,27 @@
+.section2 {
+  height: 800px;
+  width: 800px;
+}
+
+#container {
+  display: flex;
+}
+
+button {
+  font-size: larger;
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.section1 {
+  margin-left: 350px;
+  margin-bottom: 50px;
+}
+
+.box {
+  height: 45px;
+  width: 45px;
+  border: thin solid black;
+}
