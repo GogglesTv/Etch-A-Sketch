@@ -1,5 +1,6 @@
 "use strict";
 
+const section2 = document.querySelector("section2");
 const container = document.querySelector("#container");
 const button = document.querySelector("button");
 let column = document.createElement("div");
@@ -19,3 +20,11 @@ button.addEventListener("click", () => {
   container.remove(column);
   column.remove(square);
 });
+
+function resize() {
+  let newGridSize = Number(
+    prompt("Choose a number to resize the grid. (i.e. 10 = 10x10")
+  );
+  if (!newGridSize === "number")
+    Number(prompt("Invalid input. Enter a number (i.e. 10 = 10x10"));
+}
