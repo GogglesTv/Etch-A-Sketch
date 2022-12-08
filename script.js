@@ -8,6 +8,7 @@ let square = document.createElement("div");
 
 for (let i = 1; i <= 16; i++) {
   column = document.createElement("div");
+  column.classList.add("column");
   container.append(column);
   for (let x = 1; x <= 16; x++) {
     square = document.createElement("div");
@@ -32,19 +33,20 @@ function resize() {
   if (!newGridSize === "number")
     Number(prompt("Invalid input. Enter a number (i.e. 10 = 10x10"));
 
-  const newContainer = document.createElement("div");
-  newContainer.setAttribute("id", "container");
-  let newColumn = document.createElement("div");
-  let newSquare = document.createElement("div");
+  container = document.createElement("div");
+  container.setAttribute("id", "container");
+  column = document.createElement("div");
+  square = document.createElement("div");
 
   for (let i = 1; i <= newGridSize; i++) {
-    section2.append(newContainer);
-    newColumn = document.createElement("div");
-    newContainer.append(newColumn);
+    section2.append(container);
+    column = document.createElement("div");
+    column.classList.add("column");
+    container.append(column);
     for (let x = 1; x <= newGridSize; x++) {
-      newSquare = document.createElement("div");
-      newSquare.classList.add("box");
-      newColumn.append(newSquare);
+      square = document.createElement("div");
+      square.classList.add("box");
+      column.append(square);
     }
   }
 }
