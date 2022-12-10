@@ -9,15 +9,18 @@ body {
   gap: 2%;
 }
 
-.section2 {
-  height: 775px;
-  width: 775px;
-  background-color: white;
-  border: thin solid black;
+header {
+  color: white;
+  font-size: 75px;
+  font-family: "Nerko One", cursive;
+  margin: -25px 0px;
 }
 
 #container {
-  display: flex;
+  display: grid;
+  width: 65vw;
+  height: 65vh;
+  margin: auto;
 }
 
 button {
@@ -28,7 +31,6 @@ button {
   cursor: pointer;
 }
 
-.box {
-  height: 45px;
-  width: 45px;
+button:hover {
+  background-color: lightgray;
 }
