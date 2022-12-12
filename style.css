@@ -17,10 +17,12 @@ header {
 }
 
 #container {
-  display: grid;
-  width: 65vw;
-  height: 65vh;
-  margin: auto;
+  display: inline-grid;
+  grid-template-columns: repeat(16, 2fr);
+  grid-template-rows: repeat(16, 2fr);
+  width: 750px;
+  height: 750px;
+  border: 2.5px solid black;
 }
 
 button {
