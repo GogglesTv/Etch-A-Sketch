@@ -14,13 +14,21 @@ function createGrid() {
     cell.classList.add("box");
     cell.style.backgroundColor = "white";
     cell.addEventListener("mouseenter", (e) => {
-      e.target.style.backgroundColor = "black";
+      e.target.style.backgroundColor = makeRandColor();
     });
   }
 
   container.style.setProperty(`grid-template-columns`, `repeat(16, 2fr)`);
   container.style.setProperty(`grid-template-rows`, `repeat(16, 2fr)`);
 }
+
+const makeRandColor = () => {
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = Math.floor(Math.random() * 255);
+
+  return `rgb(${r}, ${g},${b})`;
+};
 
 resetButton.addEventListener("click", reset);
 function reset() {
@@ -48,7 +56,9 @@ function reset() {
     cell.classList.add("box");
     cell.style.backgroundColor = "white";
     cell.addEventListener("mouseenter", (e) => {
-      e.target.style.backgroundColor = "black";
+      e.target.style.backgroundColor = makeRandColor();
+      if (e.target.style.backgroundColor === makeRandColor) {
+      }
     });
   }
 }
